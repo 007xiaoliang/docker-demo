@@ -8,6 +8,6 @@ ENV GOPROXY=https://goproxy.cn,direct
 RUN go mod init
 #增加缺失的包，移除没用的包
 RUN go mod tidy
-RUN go build app.go
+RUN go build cmd/http.go
 EXPOSE 80:80
 CMD ["go","run","cmd/http.go"]
